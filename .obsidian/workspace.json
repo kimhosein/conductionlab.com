@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "research/Research Program.md",
+                "file": "research/submissions/AI-SDM CMU.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Research Program"
+              "title": "AI-SDM CMU"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "research/Research Program.md",
+                "file": "research/submissions/AI-SDM CMU.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Research Program"
+              "title": "Backlinks for AI-SDM CMU"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "research/Research Program.md",
+                "file": "research/submissions/AI-SDM CMU.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Research Program"
+              "title": "Outgoing links from AI-SDM CMU"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "research/Research Program.md",
+                "file": "research/submissions/AI-SDM CMU.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Research Program"
+              "title": "Outline of AI-SDM CMU"
             }
           }
         ]
@@ -186,33 +186,33 @@
   },
   "active": "35e1d78a732fe26b",
   "lastOpenFiles": [
-    "research/pillar-3-translation/Pillar III — Translation.md",
+    "research/pillar-3-translation/Eleos.md",
     "research/pillar-3-translation/Mirror Node Protocol.md",
+    "research/pillar-3-translation/Pillar III — Translation.md",
     "research/pillar-3-translation/PV-to-AI Methodology.md",
     "research/pillar-3-translation/Loopwork Auditor Protocol.md",
-    "research/pillar-3-translation/Eleos.md",
     "research/pillar-3-translation/Behavioral Signature Authentication.md",
-    "research/submissions/Stanford AIMI Poster.md",
-    "research/submissions/FDA Comment.md",
-    "research/submissions/AIES Submission 197.md",
-    "research/submissions/AI-SDM CMU.md",
     "research/pillar-2-conduction/The Conduction Hypothesis.md",
     "research/pillar-2-conduction/Pillar II — Conduction.md",
     "research/pillar-2-conduction/Misconduction and Signal Fidelity.md",
-    "research/pillar-2-conduction/Alignment Architecture as Encoded Bias.md",
     "research/pillar-2-conduction/Human-AI Interaction Specifications.md",
-    "research/pillar-1-loopwork/Tri-System Architecture.md",
-    "research/pillar-1-loopwork/Pillar I — Loopwork.md",
-    "research/pillar-1-loopwork/Nine-Pillar Shame Taxonomy.md",
+    "research/pillar-2-conduction/Alignment Architecture as Encoded Bias.md",
     "research/pillar-1-loopwork/Inverse Attachment Framework.md",
+    "research/pillar-1-loopwork/Nine-Pillar Shame Taxonomy.md",
+    "research/pillar-1-loopwork/Pillar I — Loopwork.md",
+    "research/pillar-1-loopwork/Tri-System Architecture.md",
     "research/pillar-1-loopwork/Emotional Co-Processing and Recursion.md",
+    "working/README.md",
+    "research/submissions/Stanford AIMI Poster.md",
+    "research/submissions/FDA Comment.md",
+    "research/submissions/AI-SDM CMU.md",
+    "research/submissions/AIES Submission.md",
+    "research/Research Program.md",
     "research/submissions",
     "research/pillar-3-translation",
     "research/pillar-2-conduction",
     "research/pillar-1-loopwork",
-    "research/Research Program.md",
     "research",
-    "working/README.md",
     "working",
     "Untitled"
   ]

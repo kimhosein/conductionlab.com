@@ -8,22 +8,14 @@
 
 ---
 
-## Summary
 
-Applies [[PV-to-AI Methodology|causality assessment methodology]] to AI safety layer failures, demonstrating how [[Alignment Architecture as Encoded Bias|alignment architectures pattern-match on demographics over methodology]] — producing gendered institutional dismissal with measurable clinical parallels.
-
-First accepted academic presentation. Presented independently under Loopwork System LLC with no institutional affiliation.
 
 ## Files
 - Poster PDF in repo: `Hosein_AIMI2026_Poster_FINAL.pdf`
 
-## Frameworks Applied
-- [[The Conduction Hypothesis]]
-- [[Alignment Architecture as Encoded Bias]]
-- [[Nine-Pillar Shame Taxonomy]]
-- [[PV-to-AI Methodology]]
+
 
 ---
 
-## Notes
+## 
 

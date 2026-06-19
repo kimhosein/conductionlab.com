@@ -22,7 +22,7 @@ Where Pillars I and II meet the real world. Conference submissions, governance f
 ---
 
 ## Active Work
-- [[AIES Submission 197]] — Under review, decision expected July 16, 2026
+- [[AIES Submission]] — Under review, decision expected July 16, 2026
 - [[AI-SDM CMU]] — Abstract deadline July 17, 2026
 - [[FDA Comment]] — Submitted to docket FDA-2026-N-4390
 
