@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "working/Draft- FDA blog post.md",
+                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Draft- FDA blog post"
+              "title": "2026-06-19-fda-ai-clinical-trials"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "working/Draft- FDA blog post.md",
+                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Draft- FDA blog post"
+              "title": "Backlinks for 2026-06-19-fda-ai-clinical-trials"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "working/Draft- FDA blog post.md",
+                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Draft- FDA blog post"
+              "title": "Outgoing links from 2026-06-19-fda-ai-clinical-trials"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "working/Draft- FDA blog post.md",
+                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Draft- FDA blog post"
+              "title": "Outline of 2026-06-19-fda-ai-clinical-trials"
             }
           }
         ]
@@ -215,9 +215,10 @@
   },
   "active": "3f63db51bde26860",
   "lastOpenFiles": [
-    "working/README.md",
     "working/Draft- FDA blog post.md",
+    "_posts/2026-06-19-fda-ai-clinical-trials.md",
     "_posts/2026-19-06-fda-clinical-trials-ph1.md.md",
+    "working/README.md",
     "_posts/2026-06-06-ai-efficiency-gap-clinical-safety.md",
     "research/submissions/AI-SDM CMU.md",
     "research/pillar-3-translation/Eleos.md",
