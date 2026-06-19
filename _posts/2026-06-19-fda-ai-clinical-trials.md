@@ -15,7 +15,6 @@ in April, the FDA opened Docket No. FDA-2026-N-4390 — a request for informatio
 - How should AI system performance be measured? 
 - How should trustworthiness be assessed?
 
-
 ## Official Comment
 
 My comment addressed three problems.
