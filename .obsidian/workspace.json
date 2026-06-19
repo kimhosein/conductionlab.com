@@ -48,9 +48,19 @@
               "icon": "lucide-file",
               "title": "2026-06-19-fda-ai-clinical-trials"
             }
+          },
+          {
+            "id": "c03a7246c24e2a5c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +133,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +142,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-06-19-fda-ai-clinical-trials"
+              "title": "Backlinks"
             }
           },
           {
@@ -142,12 +151,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-06-19-fda-ai-clinical-trials"
+              "title": "Outgoing links"
             }
           },
           {
@@ -185,13 +193,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2026-06-19-fda-ai-clinical-trials.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-06-19-fda-ai-clinical-trials"
+              "title": "Outline"
             }
           }
         ]
@@ -213,10 +220,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3f63db51bde26860",
+  "active": "c03a7246c24e2a5c",
   "lastOpenFiles": [
-    "working/Draft- FDA blog post.md",
     "_posts/2026-06-19-fda-ai-clinical-trials.md",
+    "working/Draft- FDA blog post.md",
     "_posts/2026-19-06-fda-clinical-trials-ph1.md.md",
     "working/README.md",
     "_posts/2026-06-06-ai-efficiency-gap-clinical-safety.md",
