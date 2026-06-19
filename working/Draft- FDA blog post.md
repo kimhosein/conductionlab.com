@@ -1,5 +1,5 @@
 The FDA recently requested comments on utilizing AI in phase one clinical trials
-n April, the FDA opened Docket No. FDA-2026-N-4390 — a request for information on a proposed pilot program to assess how AI-enabled technologies can improve efficiency, speed, and quality of decision-making in early-phase clinical trials. The questions were thorough. 
+in April, the FDA opened Docket No. FDA-2026-N-4390 — a request for information on a proposed pilot program to assess how AI-enabled technologies can improve efficiency, speed, and quality of decision-making in early-phase clinical trials. The questions were thorough. 
 - How should the pilot be scoped? 
 - What metrics should evaluate trial efficiency, decision quality, participant safety?
 - How should AI system performance be measured? 
@@ -68,6 +68,6 @@ Pharmacovigilance causality assessment was designed for precisely this problem: 
 
 Apply this to AI in clinical trials. Did the AI system's output cause a change in the reviewer's assessment? Temporal relationship: the reviewer's conclusion followed the AI's summary. Dechallenge: remove the AI summary and have the reviewer assess the raw data — does the conclusion change? Rechallenge: reintroduce the AI summary — does the original conclusion return? Confounders: was the reviewer's judgment shaped by other factors — workload, time pressure, prior expectations?
 
-This is not theoretical. This is the methodology every clinical trial already uses to evaluate whether a drug caused an adverse event. The same methodology applies to evaluating whether an AI system caused a change in clinical judgment. The framework is sitting in the FDA's own toolkit. It has been validated, standardized, and enforced across the global clinical trial enterprise for decades.
+ This is the methodology every clinical trial already uses to evaluate whether a drug caused an adverse event. The same methodology applies to evaluating whether an AI system caused a change in clinical judgment. The framework is sitting in the FDA's own toolkit. It has been validated, standardized, and enforced across the global clinical trial enterprise for decades.
 
 The question is not whether we have the tools to evaluate AI in clinical trials. The question is whether we are willing to apply the standards we already enforce to the systems we are building.
