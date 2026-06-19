@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "working/Untitled.md",
+                "file": "working/Draft- FDA blog post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Draft- FDA blog post"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "working/Untitled.md",
+                "file": "working/Draft- FDA blog post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled"
+              "title": "Backlinks for Draft- FDA blog post"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "working/Untitled.md",
+                "file": "working/Draft- FDA blog post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled"
+              "title": "Outgoing links from Draft- FDA blog post"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "working/Untitled.md",
+                "file": "working/Draft- FDA blog post.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of Draft- FDA blog post"
             }
           }
         ]
@@ -213,10 +213,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c0be03a2b01db672",
+  "active": "3f63db51bde26860",
   "lastOpenFiles": [
     "working/README.md",
-    "working/Untitled.md",
+    "working/Draft- FDA blog post.md",
     "_posts/2026-19-06-fda-clinical-trials-ph1.md.md",
     "_posts/2026-06-06-ai-efficiency-gap-clinical-safety.md",
     "research/submissions/AI-SDM CMU.md",
