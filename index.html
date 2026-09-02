@@ -55,6 +55,9 @@
       --accent: #6b4c3b;
       --accent-light: #8b6c5b;
       --accent-subtle: #f0ebe3;
+      --teal: #1a5e4a;
+      --teal-light: #2a7a5f;
+      --teal-subtle: rgba(26, 94, 74, 0.08);
       --bg: #f8f6f1;
       --bg-warm: #e8e4dc;
       --bg-hero: #f0ebe3;
@@ -151,27 +154,27 @@
     }
 
     .signal-line {
-      stroke: var(--accent);
-      stroke-width: 1;
+      stroke: var(--teal);
+      stroke-width: 1.5;
       fill: none;
-      opacity: 0.07;
+      opacity: 0.12;
     }
 
     .signal-line:nth-child(2) {
-      opacity: 0.05;
-      stroke-width: 1.5;
+      opacity: 0.09;
+      stroke-width: 2;
     }
 
     .signal-line:nth-child(3) {
-      opacity: 0.04;
-      stroke-width: 2;
+      opacity: 0.07;
+      stroke-width: 2.5;
     }
 
     /* Conducting pulse that travels along the line */
     .signal-pulse {
       fill: none;
-      stroke: var(--accent);
-      stroke-width: 2;
+      stroke: var(--teal);
+      stroke-width: 2.5;
       stroke-linecap: round;
       opacity: 0;
     }
@@ -193,31 +196,31 @@
 
     @keyframes conductPulse1 {
       0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.35; }
-      50% { opacity: 0.2; }
-      95% { opacity: 0.35; }
+      5% { opacity: 0.5; }
+      50% { opacity: 0.3; }
+      95% { opacity: 0.5; }
       100% { stroke-dashoffset: -200; opacity: 0; }
     }
 
     @keyframes conductPulse2 {
       0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.3; }
-      50% { opacity: 0.15; }
-      95% { opacity: 0.3; }
+      5% { opacity: 0.45; }
+      50% { opacity: 0.25; }
+      95% { opacity: 0.45; }
       100% { stroke-dashoffset: -200; opacity: 0; }
     }
 
     @keyframes conductPulse3 {
       0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.25; }
-      50% { opacity: 0.12; }
-      95% { opacity: 0.25; }
+      5% { opacity: 0.4; }
+      50% { opacity: 0.2; }
+      95% { opacity: 0.4; }
       100% { stroke-dashoffset: -200; opacity: 0; }
     }
 
     /* Glowing dot that travels along the path */
     .signal-traveler {
-      fill: var(--accent);
+      fill: var(--teal);
       opacity: 0;
       filter: url(#glow);
     }
@@ -236,9 +239,9 @@
 
     @keyframes travelerFade {
       0%, 100% { opacity: 0; }
-      10% { opacity: 0.6; }
-      50% { opacity: 0.4; }
-      90% { opacity: 0.6; }
+      10% { opacity: 0.8; }
+      50% { opacity: 0.5; }
+      90% { opacity: 0.8; }
     }
 
     /* Gradient fade at bottom of hero */
@@ -299,7 +302,7 @@
       display: block;
       width: 1px;
       height: 48px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
+      background: linear-gradient(to bottom, var(--teal), transparent);
       margin: 0 auto;
       animation: scrollPulse 2.5s ease-in-out infinite;
     }
@@ -320,8 +323,8 @@
     .accent-line {
       display: block;
       width: 48px;
-      height: 1px;
-      background: var(--accent);
+      height: 2px;
+      background: var(--teal);
       margin-bottom: 32px;
     }
 
@@ -398,7 +401,7 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--teal);
       margin-bottom: 18px;
     }
 
@@ -414,7 +417,7 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 0.82rem;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--teal);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
