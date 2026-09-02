@@ -5,168 +5,592 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGJQSQGF4W"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKKN2V9YL5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-WGJQSQGF4W');
+    gtag('config', 'G-GKKN2V9YL5');
   </script>
 
-  <title>Loopwork System — Kim Hosein | AI Safety Evaluation Research</title>
-  <meta name="description" content="Loopwork System, LLC. Independent research by Kim Hosein applying clinical causality assessment to the bidirectional interaction between humans and AI systems. Foundational research on emotional recursion and attachment co-developed with Chris Hoyd.">
+  <title>The Conduction Lab — Baseline Shifts & Relational Signal Detection</title>
+  <meta name="description" content="The Conduction Lab. Independent research documenting how sustained interaction with AI systems, social platforms, and relational exposure produces measurable shifts from individual behavioral baselines.">
   <meta name="author" content="Kim Hosein">
-  <link rel="canonical" href="https://loopworksystem.com">
-  
+  <link rel="canonical" href="https://conductionlab.com">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Loopwork System — Kim Hosein">
-  <meta property="og:description" content="Independent research applying clinical causality assessment to the bidirectional interaction between humans and AI systems.">
+  <meta property="og:title" content="The Conduction Lab">
+  <meta property="og:description" content="Systems shift people from their baselines. AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://loopworksystem.com">
-  <meta property="og:site_name" content="Loopwork System">
-  
+  <meta property="og:url" content="https://conductionlab.com">
+  <meta property="og:site_name" content="The Conduction Lab">
+
   <!-- Twitter/Social Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Loopwork System — Kim Hosein">
-  <meta name="twitter:description" content="Independent research applying clinical causality assessment to the bidirectional interaction between humans and AI systems.">
-  
+  <meta name="twitter:title" content="The Conduction Lab">
+  <meta name="twitter:description" content="Systems shift people from their baselines. AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years.">
+
   <!-- Google Scholar metadata -->
   <meta name="citation_author" content="Hosein, Kim">
   <meta name="citation_title" content="Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm">
   <meta name="citation_publication_date" content="2026/06/03">
   <meta name="citation_conference_title" content="Stanford AIMI Symposium 2026">
-  <meta name="citation_pdf_url" content="https://loopworksystem.com/Hosein_AIMI2026_Poster_FINAL.pdf">
+  <meta name="citation_pdf_url" content="https://conductionlab.com/Hosein_AIMI2026_Poster_FINAL.pdf">
   <meta name="citation_doi" content="10.5281/zenodo.20369051">
-  
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --text-primary: #1a1a1a;
+      --text-secondary: #7a746b;
+      --accent: #6b4c3b;
+      --accent-light: #8b6c5b;
+      --accent-subtle: #f0ebe3;
+      --bg: #f8f6f1;
+      --bg-warm: #e8e4dc;
+      --bg-hero: #f0ebe3;
+      --rule: #d4cfc6;
+      --white: #ffffff;
+      --max-content: 700px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(248, 246, 241, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-name {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: var(--bg-hero);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-bg svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.15s ease-out;
+    }
+
+    .signal-line {
+      stroke: var(--accent);
+      stroke-width: 1;
+      fill: none;
+      opacity: 0.07;
+    }
+
+    .signal-line:nth-child(2) {
+      opacity: 0.05;
+      stroke-width: 1.5;
+    }
+
+    .signal-line:nth-child(3) {
+      opacity: 0.04;
+      stroke-width: 2;
+    }
+
+    .signal-dot {
+      fill: var(--accent);
+      opacity: 0;
+      animation: dotPulse 4s ease-in-out infinite;
+    }
+
+    .signal-dot:nth-child(5) { animation-delay: 0.8s; }
+    .signal-dot:nth-child(6) { animation-delay: 1.6s; }
+    .signal-dot:nth-child(7) { animation-delay: 2.4s; }
+    .signal-dot:nth-child(8) { animation-delay: 3.2s; }
+
+    @keyframes dotPulse {
+      0%, 100% { opacity: 0; r: 1.5; }
+      50% { opacity: 0.25; r: 3; }
+    }
+
+    /* Gradient fade at bottom of hero */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 180px;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      padding: 120px 48px 120px;
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 36px;
+      letter-spacing: -0.02em;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.8s ease-out 0.3s forwards;
+    }
+
+    .hero .sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-weight: 300;
+      max-width: 640px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease-out 0.6s forwards;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out 1.2s forwards;
+    }
+
+    .hero-scroll span {
+      display: block;
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      margin: 0 auto;
+      animation: scrollPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Accent line element */
+    .accent-line {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    /* Intro section */
+    .section-intro {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 80px 48px 80px;
+    }
+
+    .section-intro h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 28px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .section-intro p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .section-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Work section */
+    .work-section {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 100px 48px;
+    }
+
+    .work-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .work-inner h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 56px;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+
+    .work-card {
+      background: var(--bg);
+      padding: 40px 36px;
+      transition: background 0.3s;
+    }
+
+    .work-card:hover {
+      background: var(--accent-subtle);
+    }
+
+    .work-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .work-card p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .work-card a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.25s;
+    }
+
+    .work-card a:hover {
+      gap: 10px;
+    }
+
+    .work-card a::after {
+      content: '→';
+      font-size: 16px;
+    }
+
+    /* About section */
+    .about-section {
+      background: var(--bg);
+    }
+
+    .about-inner {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 100px 48px;
+    }
+
+    .about-inner h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 28px;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .about-inner p {
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    .about-inner p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--rule);
+      padding: 32px 48px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 24px;
+        height: 56px;
+      }
+
+      .nav-links {
+        gap: 20px;
+        font-size: 13px;
+      }
+
+      .hero-content {
+        padding: 100px 24px 100px;
+      }
+
+      .section-intro {
+        padding: 60px 24px;
+      }
+
+      .work-section {
+        padding: 72px 24px;
+      }
+
+      .work-inner h2 {
+        margin-bottom: 36px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card {
+        padding: 32px 28px;
+      }
+
+      .about-inner {
+        padding: 72px 24px;
+      }
+
+      footer {
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Loopwork System</a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+  <nav>
+    <a href="/" class="nav-name">The Conduction Lab</a>
+    <ul class="nav-links">
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-label">Loopwork System, LLC</div>
-    <h1>Independent research at the intersection of clinical methodology and AI safety</h1>
-    <p class="hero-sub">Applying clinical causality assessment methodology to the bidirectional interaction between humans and AI systems.</p>
-    <div class="hero-rule"></div>
-  </header>
-
-  <div class="divider"><hr></div>
-
-  <!-- RESEARCH -->
-  <section id="research" class="fade-in">
-    <div class="section-label">Research Program</div>
-    <h2>Three Pillars</h2>
-    <p>Loopwork System's research is organized across three interconnected pillars — the human behavioral substrate, the AI systems layer, and the applied work where they meet the real world.</p>
-
-    <!-- PILLAR 1: LOOPWORK -->
-    <div class="pillar-block">
-      <div class="pillar-header">
-        <div class="pillar-number">I</div>
-        <div>
-          <h3 class="pillar-name">Loopwork</h3>
-          <div class="pillar-subtitle">Human Behavioral Infrastructure</div>
-        </div>
-      </div>
-      <p class="pillar-description">Recursion, emotional co-processing, compulsion and attachment mechanics, inverse attachment. The nine-pillar shame taxonomy. The Tri-System Architecture — deep governor/salience network, prefrontal cortex as social navigation organ, default mode network as narrative bridge. This pillar maps what happens inside the person when they encounter systems designed to hold, mirror, or manage human signal.</p>
-      <div class="pillar-credit">Co-developed with Chris Hoyd</div>
-      <div class="pillar-items">
-        <div class="pillar-item">Tri-System Neuroarchitecture</div>
-        <div class="pillar-item">Nine-Pillar Shame Taxonomy</div>
-        <div class="pillar-item">Inverse Attachment Framework</div>
-        <div class="pillar-item">Emotional Co-Processing &amp; Recursion</div>
-      </div>
+  <section class="hero">
+    <div class="hero-bg">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <path class="signal-line" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
+        <path class="signal-line" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
+        <path class="signal-line" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
+        <circle class="signal-dot" cx="600" cy="350" r="2" />
+        <circle class="signal-dot" cx="1000" cy="450" r="2" />
+        <circle class="signal-dot" cx="350" cy="480" r="2" />
+        <circle class="signal-dot" cx="800" cy="600" r="2" />
+        <circle class="signal-dot" cx="1150" cy="680" r="2" />
+      </svg>
     </div>
-
-    <!-- PILLAR 2: CONDUCTION -->
-    <div class="pillar-block">
-      <div class="pillar-header">
-        <div class="pillar-number">II</div>
-        <div>
-          <h3 class="pillar-name">Conduction</h3>
-          <div class="pillar-subtitle">AI Systems &amp; the Interaction Layer</div>
-        </div>
-      </div>
-      <p class="pillar-description">The Conduction Hypothesis — LLMs conduct human behavioral signal through training data rather than generating independent cognition. This pillar examines the full interaction layer between humans and AI: how relational specifications form between user and system, how alignment architectures shape what gets conducted back, how source misattribution occurs at the point of reception, and how safety systems encode institutional patterns that produce measurable harm. Misconduction as a signal fidelity problem.</p>
-      <div class="pillar-items">
-        <div class="pillar-item">The Conduction Hypothesis</div>
-        <div class="pillar-item">Human-AI Interaction Specifications</div>
-        <div class="pillar-item">Alignment Architecture as Encoded Bias</div>
-        <div class="pillar-item">Misconduction &amp; Signal Fidelity</div>
-      </div>
+    <div class="hero-content">
+      <h1>Systems shift people from their baselines.</h1>
+      <p class="sub">AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years. The evidence is scattered across fields. The research has rarely been connected.</p>
     </div>
+    <div class="hero-scroll"><span></span></div>
+  </section>
 
-    <!-- PILLAR 3: TRANSLATION -->
-    <div class="pillar-block">
-      <div class="pillar-header">
-        <div class="pillar-number">III</div>
-        <div>
-          <h3 class="pillar-name">Translation</h3>
-          <div class="pillar-subtitle">Applied Research &amp; Output</div>
+  <div class="section-intro reveal">
+    <span class="accent-line"></span>
+    <h2>The lab exists to connect it.</h2>
+    <p>The Conduction Lab develops measurement frameworks, detection tools, and governance architectures for a phenomenon observed across every domain but studied in none as a unified problem: the systematic shift of human baselines by the systems people interact with.</p>
+    <p>Our foundational research identifies the mechanism. Large language models don't generate human-like signal — they conduct real human signal through training data, producing systematic source misattribution at the point of reception. This is the Conduction Hypothesis, and it reframes how we study human-AI interaction, AI safety, and the broader question of what happens when systems mediate human experience.</p>
+    <p>The methodology is native to pharmacovigilance and clinical research — signal detection, causality assessment, and baseline measurement applied to a new exposure class. The work extends beyond AI to every system that shifts a baseline: social media, devices, relational dynamics, and the body itself.</p>
+  </div>
+
+  <section id="research" class="work-section">
+    <div class="work-inner reveal">
+      <h2>The work</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Research</h3>
+          <p>The theoretical foundation. The Conduction Hypothesis, misconduction as a failure mode, corpus dynamics as the study of how humans interact with the accumulated body of what they've received and stored, and the frameworks that make baseline shifts detectable.</p>
+          <a href="publications.html">Explore</a>
         </div>
-      </div>
-      <p class="pillar-description">Where Pillars I and II meet the real world. Conference submissions, governance frameworks, policy implications, and the tools that emerge when clinical causality assessment methodology confronts AI system design. The Auditor Protocol, Behavioral Signature Authentication, and the governance architecture that makes the theoretical work actionable.</p>
-
-      <div class="research-subheading">Accepted</div>
-      <div class="research-grid">
-        <div class="research-card">
-          <div class="research-type">Conference Poster</div>
-          <h3>Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm</h3>
-          <div class="research-venue">Stanford AIMI Symposium · June 3, 2026</div>
-          <p>Applies causality assessment methodology to AI safety layer failures, demonstrating how alignment architectures pattern-match on demographics over methodology — producing gendered institutional dismissal with measurable clinical parallels.</p>
-          <div class="research-links">
-            <a href="#poster">View Poster</a>
-            <a href="https://doi.org/10.5281/zenodo.20369051" target="_blank">Zenodo DOI</a>
-            <a href="https://loopworksystem.substack.com" target="_blank">Research Register</a>
-          </div>
+        <div class="work-card">
+          <h3>Translational Work</h3>
+          <p>Theory turned into infrastructure. Detection frameworks, authentication protocols, clinical AI governance tools, and product architectures that operationalize the research into systems people and organizations can use.</p>
+          <a href="publications.html">Explore</a>
+        </div>
+        <div class="work-card">
+          <h3>Publications</h3>
+          <p>Academic presentations, submitted research, and long-form writing. Peer-reviewed work alongside public writing that develops ideas before formal submission.</p>
+          <a href="publications.html">Explore</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"><hr></div>
-
-  <!-- POSTER -->
-  <section id="poster" class="poster-section fade-in">
-    <div class="section-label">Stanford AIMI Symposium 2026</div>
-    <h2>Conference Poster</h2>
-    <div class="poster-meta">
-      <p>Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm</p>
-      <p style="margin-top: 0.8rem; font-size: 0.85rem;">Kimberly Hosein, MBA · Loopwork System, LLC · June 3, 2026 · Paul Berg Hall, Stanford University</p>
+  <section class="about-section">
+    <div class="about-inner reveal">
+      <span class="accent-line"></span>
+      <h2>About the lab</h2>
+      <p>The Conduction Lab was founded by Kim Hosein, MBA — a clinical project manager in pharmaceutical research whose work in pharmacovigilance and clinical operations provided the native methodology for studying what AI systems actually do to the people who use them.</p>
+      <p>The lab applies signal detection and causality assessment — methods built for identifying adverse events in black-box systems where mechanism is invisible and attribution is assessed from output — to the question of how systems shift human baselines. The result is a research program that doesn't require access to model internals to produce actionable findings.</p>
     </div>
-    <div class="poster-viewer-wrap">
-      <iframe src="Hosein_AIMI2026_Poster_FINAL.pdf" title="AIMI 2026 Conference Poster"></iframe>
-    </div>
-    <a href="Hosein_AIMI2026_Poster_FINAL.pdf" download class="poster-download">Download PDF</a>
-    <a href="https://doi.org/10.5281/zenodo.20369051" target="_blank" class="poster-download" style="margin-left: 2rem;">Zenodo DOI</a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div>&copy; 2026 Loopwork System, LLC. All rights reserved.</div>
-    <div>
-      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> · 
+    <div>&copy; 2026 The Conduction Lab. All rights reserved.</div>
+    <div style="margin-top: 0.5rem;">
+      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> ·
       <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    const heroBg = document.querySelector('.hero-bg svg');
+    if (heroBg && window.matchMedia('(pointer: fine)').matches) {
+      document.querySelector('.hero').addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 12;
+        const y = (e.clientY / window.innerHeight - 0.5) * 8;
+        heroBg.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+  </script>
 
 </body>
 </html>
