@@ -14,12 +14,12 @@
   </script>
 
   <title>About — The Conduction Lab</title>
-  <meta name="description" content="About Kim Hosein and Chris Hoyd — the researchers behind The Conduction Lab's framework for detecting and measuring baseline shifts caused by relational exposure to AI and other systems.">
+  <meta name="description" content="The Conduction Lab applies clinical signal detection methodology to measure how sustained interaction with AI systems, social platforms, and algorithmically mediated relationships shifts people from their behavioral baselines.">
   <meta name="author" content="Kim Hosein">
 
   <!-- Open Graph -->
   <meta property="og:title" content="About — The Conduction Lab">
-  <meta property="og:description" content="About Kim Hosein and Chris Hoyd — the researchers connecting independent findings on baseline shifts into a unified clinical framework.">
+  <meta property="og:description" content="Clinical signal detection methodology applied to baseline shifts from relational exposure — AI, platforms, and algorithmically mediated systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://conductionlab.com/about.html">
   <meta property="og:site_name" content="The Conduction Lab">
@@ -117,13 +117,13 @@
     .accent-line {
       display: block;
       width: 48px;
-      height: 1px;
+      height: 2px;
       background: var(--accent);
       margin-bottom: 32px;
     }
 
-    /* Page content */
-    .page-content {
+    /* Lab section */
+    .lab-section {
       max-width: var(--max-content);
       margin: 0 auto;
       padding: 140px 48px 80px;
@@ -139,7 +139,7 @@
       margin-bottom: 24px;
     }
 
-    .page-content h2 {
+    .lab-section h2 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.4rem);
       font-weight: 400;
@@ -149,49 +149,15 @@
       color: var(--text-primary);
     }
 
-    .page-content p {
+    .lab-section p {
       color: var(--text-secondary);
       font-weight: 300;
       margin-bottom: 20px;
       line-height: 1.75;
     }
 
-    .page-content p:last-child {
+    .lab-section p:last-child {
       margin-bottom: 0;
-    }
-
-    /* About layout with sidebar */
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 56px;
-      align-items: start;
-    }
-
-    .about-photo {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 28px;
-    }
-
-    .detail-item {
-      margin-bottom: 16px;
-    }
-
-    .detail-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .detail-value {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.5;
     }
 
     /* Divider */
@@ -206,47 +172,72 @@
       border-top: 1px solid var(--rule);
     }
 
-    /* Second person section */
-    .person-section {
+    /* Team section */
+    .team-section {
       max-width: var(--max-content);
       margin: 0 auto;
       padding: 64px 48px 80px;
     }
 
-    .person-section h2 {
+    .team-section h2 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 400;
-      margin-bottom: 8px;
+      margin-bottom: 40px;
       line-height: 1.25;
       letter-spacing: -0.015em;
       color: var(--text-primary);
     }
 
-    .person-role {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      margin-bottom: 24px;
-    }
-
-    .person-layout {
+    .team-grid {
       display: grid;
-      grid-template-columns: 1fr 200px;
+      grid-template-columns: 1fr 1fr;
       gap: 48px;
-      align-items: start;
     }
 
-    .person-layout p {
+    .team-member {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .team-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .team-cred {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      margin-left: 8px;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .team-bio {
+      font-size: 0.92rem;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.75;
-    }
-
-    .person-photo {
-      width: 100%;
-      border-radius: 4px;
+      line-height: 1.7;
     }
 
     /* Footer */
@@ -294,32 +285,21 @@
         font-size: 13px;
       }
 
-      .page-content {
+      .lab-section {
         padding: 120px 24px 60px;
       }
 
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-
-      .about-layout .about-sidebar {
-        order: -1;
-        max-width: 240px;
-      }
-
-      .person-section {
+      .team-section {
         padding: 48px 24px 60px;
       }
 
-      .person-layout {
+      .team-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 48px;
       }
 
-      .person-layout .person-photo-wrap {
-        order: -1;
-        max-width: 180px;
+      .team-photo {
+        max-width: 280px;
       }
 
       .divider {
@@ -350,47 +330,31 @@
     </ul>
   </nav>
 
-  <div class="page-content reveal">
+  <div class="lab-section reveal">
     <span class="accent-line"></span>
     <div class="page-label">About</div>
-    <div class="about-layout">
-      <div class="about-text">
-        <h2>Kim Hosein</h2>
-        <p>Founder of The Conduction Lab. Over a decade of Phase I–IV clinical trial experience as a clinical project lead, working inside the systems that track what drugs do to people over time — adverse event reporting, signal detection, causality assessment. The infrastructure that answers: did this exposure cause this change?</p>
-        <p>That question doesn't stop at pharmaceuticals. People are interacting with AI systems, social platforms, and algorithmically mediated relationships at a scale and intensity that has no precedent. Researchers across disciplines are documenting pieces of what's happening — dose-response effects, longitudinal behavioral change, attachment shifts — but they're working in silos, and no one has applied the clinical signal detection methodology that already exists for exactly this kind of problem.</p>
-        <p>The Conduction Lab is the framework that connects those pieces. The same methodology used to determine whether a drug caused an adverse event can detect and measure the baseline shifts caused by any sustained relational exposure. The unit of analysis is the joint distribution — what forms between person and system — not the individual measured in isolation.</p>
-      </div>
-      <div class="about-sidebar">
-        <img src="headshot.jpeg" alt="Kim Hosein" class="about-photo">
-        <div class="about-details">
-          <div class="detail-item">
-            <div class="detail-label">Role</div>
-            <div class="detail-value">Founder, The Conduction Lab</div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-label">Background</div>
-            <div class="detail-value">Clinical Project Lead · BS Biology · MBA</div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-label">Focus</div>
-            <div class="detail-value">Baseline shifts from relational exposure — measured with clinical signal detection methodology</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2>The Conduction Lab</h2>
+    <p>People are interacting with AI systems, social platforms, and algorithmically mediated relationships at a scale and intensity that has no precedent. Researchers across disciplines are documenting pieces of what's happening — dose-response effects, longitudinal behavioral change, attachment shifts — but they're working in silos, and no one has connected the findings.</p>
+    <p>The Conduction Lab applies clinical signal detection methodology — the same infrastructure used to determine whether a drug caused an adverse event — to the question of how systems shift human baselines. Adverse event reporting, causality assessment, and pharmacovigilance methodology already exist for exactly this kind of problem. They've just never been applied outside pharmaceuticals.</p>
+    <p>The unit of analysis is the joint distribution — what forms between person and system — not the individual measured in isolation. The result is a framework that can detect and measure baseline shifts caused by any sustained relational exposure.</p>
   </div>
 
   <div class="divider"><hr></div>
 
-  <section class="person-section reveal">
-    <h2>Chris Hoyd</h2>
-    <div class="person-role">Co-developer — Human Behavioral Infrastructure</div>
-    <div class="person-layout">
-      <div>
-        <p>Chris Hoyd holds a JD and brings over a decade of experience in product strategy, UX design, and user research. His work maps the behavioral substrate that makes baseline shift detection possible — the mechanics of emotional recursion, attachment dynamics, and compulsion patterns that constitute someone's individual behavioral signature. This infrastructure is what allows deviation from the mean to be measured at the individual level rather than lost in group averages.</p>
+  <section class="team-section reveal">
+    <h2>Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="headshot.jpeg" alt="Kim Hosein" class="team-photo">
+        <div class="team-name">Kim Hosein <span class="team-cred">BS Biology · MBA</span></div>
+        <div class="team-role">Founder</div>
+        <p class="team-bio">Over a decade of Phase I–IV clinical trial experience as a clinical project lead — adverse event reporting, signal detection, causality assessment. The infrastructure that answers: did this exposure cause this change? Kim applies that methodology to baseline shifts from relational exposure to AI and other systems.</p>
       </div>
-      <div class="person-photo-wrap">
-        <img src="chris-hoyd.jpeg" alt="Chris Hoyd" class="person-photo">
+      <div class="team-member">
+        <img src="chris-hoyd.jpeg" alt="Chris Hoyd" class="team-photo">
+        <div class="team-name">Chris Hoyd <span class="team-cred">JD</span></div>
+        <div class="team-role">Co-founder</div>
+        <p class="team-bio">Over a decade of experience in product strategy, UX design, and user research.</p>
       </div>
     </div>
   </section>
@@ -398,7 +362,6 @@
   <footer>
     <div>&copy; 2026 The Conduction Lab. All rights reserved.</div>
     <div style="margin-top: 0.5rem;">
-      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> ·
       <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
     </div>
   </footer>
