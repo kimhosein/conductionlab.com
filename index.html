@@ -167,20 +167,78 @@
       stroke-width: 2;
     }
 
-    .signal-dot {
-      fill: var(--accent);
+    /* Conducting pulse that travels along the line */
+    .signal-pulse {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 2;
+      stroke-linecap: round;
       opacity: 0;
-      animation: dotPulse 4s ease-in-out infinite;
     }
 
-    .signal-dot:nth-child(5) { animation-delay: 0.8s; }
-    .signal-dot:nth-child(6) { animation-delay: 1.6s; }
-    .signal-dot:nth-child(7) { animation-delay: 2.4s; }
-    .signal-dot:nth-child(8) { animation-delay: 3.2s; }
+    .signal-pulse.p1 {
+      stroke-dasharray: 80 2000;
+      animation: conductPulse1 6s ease-in-out infinite;
+    }
 
-    @keyframes dotPulse {
-      0%, 100% { opacity: 0; r: 1.5; }
-      50% { opacity: 0.25; r: 3; }
+    .signal-pulse.p2 {
+      stroke-dasharray: 120 2000;
+      animation: conductPulse2 8s ease-in-out 2s infinite;
+    }
+
+    .signal-pulse.p3 {
+      stroke-dasharray: 60 2000;
+      animation: conductPulse3 7s ease-in-out 4s infinite;
+    }
+
+    @keyframes conductPulse1 {
+      0% { stroke-dashoffset: 2100; opacity: 0; }
+      5% { opacity: 0.35; }
+      50% { opacity: 0.2; }
+      95% { opacity: 0.35; }
+      100% { stroke-dashoffset: -200; opacity: 0; }
+    }
+
+    @keyframes conductPulse2 {
+      0% { stroke-dashoffset: 2100; opacity: 0; }
+      5% { opacity: 0.3; }
+      50% { opacity: 0.15; }
+      95% { opacity: 0.3; }
+      100% { stroke-dashoffset: -200; opacity: 0; }
+    }
+
+    @keyframes conductPulse3 {
+      0% { stroke-dashoffset: 2100; opacity: 0; }
+      5% { opacity: 0.25; }
+      50% { opacity: 0.12; }
+      95% { opacity: 0.25; }
+      100% { stroke-dashoffset: -200; opacity: 0; }
+    }
+
+    /* Glowing dot that travels along the path */
+    .signal-traveler {
+      fill: var(--accent);
+      opacity: 0;
+      filter: url(#glow);
+    }
+
+    .signal-traveler.t1 {
+      animation: travelerFade 6s ease-in-out infinite;
+    }
+
+    .signal-traveler.t2 {
+      animation: travelerFade 8s ease-in-out 2s infinite;
+    }
+
+    .signal-traveler.t3 {
+      animation: travelerFade 7s ease-in-out 4s infinite;
+    }
+
+    @keyframes travelerFade {
+      0%, 100% { opacity: 0; }
+      10% { opacity: 0.6; }
+      50% { opacity: 0.4; }
+      90% { opacity: 0.6; }
     }
 
     /* Gradient fade at bottom of hero */
@@ -504,14 +562,42 @@
   <section class="hero">
     <div class="hero-bg">
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-        <path class="signal-line" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
-        <path class="signal-line" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
-        <path class="signal-line" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
-        <circle class="signal-dot" cx="600" cy="350" r="2" />
-        <circle class="signal-dot" cx="1000" cy="450" r="2" />
-        <circle class="signal-dot" cx="350" cy="480" r="2" />
-        <circle class="signal-dot" cx="800" cy="600" r="2" />
-        <circle class="signal-dot" cx="1150" cy="680" r="2" />
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Static base lines -->
+        <path id="line1" class="signal-line" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
+        <path id="line2" class="signal-line" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
+        <path id="line3" class="signal-line" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
+
+        <!-- Conducting pulses that travel along the lines -->
+        <path class="signal-pulse p1" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
+        <path class="signal-pulse p2" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
+        <path class="signal-pulse p3" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
+
+        <!-- Glowing dots that travel along the paths -->
+        <circle class="signal-traveler t1" r="4">
+          <animateMotion dur="6s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
+            <mpath href="#line1" />
+          </animateMotion>
+        </circle>
+        <circle class="signal-traveler t2" r="3.5">
+          <animateMotion dur="8s" begin="2s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
+            <mpath href="#line2" />
+          </animateMotion>
+        </circle>
+        <circle class="signal-traveler t3" r="3">
+          <animateMotion dur="7s" begin="4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
+            <mpath href="#line3" />
+          </animateMotion>
+        </circle>
       </svg>
     </div>
     <div class="hero-content">
@@ -564,7 +650,6 @@
   <footer>
     <div>&copy; 2026 The Conduction Lab. All rights reserved.</div>
     <div style="margin-top: 0.5rem;">
-      <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> ·
       <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
     </div>
   </footer>

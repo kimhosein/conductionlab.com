@@ -5,63 +5,367 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGJQSQGF4W"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKKN2V9YL5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-WGJQSQGF4W');
+    gtag('config', 'G-GKKN2V9YL5');
   </script>
 
-  <title>About — Loopwork System</title>
-  <meta name="description" content="About Kim Hosein and Chris Hoyd — the researchers behind Loopwork System's framework for detecting and measuring baseline shifts caused by relational exposure to AI and other systems.">
+  <title>About — The Conduction Lab</title>
+  <meta name="description" content="About Kim Hosein and Chris Hoyd — the researchers behind The Conduction Lab's framework for detecting and measuring baseline shifts caused by relational exposure to AI and other systems.">
   <meta name="author" content="Kim Hosein">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About — Loopwork System">
+  <meta property="og:title" content="About — The Conduction Lab">
   <meta property="og:description" content="About Kim Hosein and Chris Hoyd — the researchers connecting independent findings on baseline shifts into a unified clinical framework.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://conductionlab.com/about.html">
-  <meta property="og:site_name" content="Loopwork System">
+  <meta property="og:site_name" content="The Conduction Lab">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --text-primary: #1a1a1a;
+      --text-secondary: #7a746b;
+      --accent: #6b4c3b;
+      --accent-light: #8b6c5b;
+      --accent-subtle: #f0ebe3;
+      --bg: #f8f6f1;
+      --bg-warm: #e8e4dc;
+      --bg-hero: #f0ebe3;
+      --rule: #d4cfc6;
+      --white: #ffffff;
+      --max-content: 700px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(248, 246, 241, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-name {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-primary);
+    }
+
+    /* Accent line element */
+    .accent-line {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    /* Page content */
+    .page-content {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 140px 48px 80px;
+    }
+
+    .page-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .page-content h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 28px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .page-content p {
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    .page-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* About layout with sidebar */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-photo {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 28px;
+    }
+
+    .detail-item {
+      margin-bottom: 16px;
+    }
+
+    .detail-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* Divider */
+    .divider {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* Second person section */
+    .person-section {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 64px 48px 80px;
+    }
+
+    .person-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      margin-bottom: 8px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .person-role {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+
+    .person-layout {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .person-layout p {
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .person-photo {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--rule);
+      padding: 32px 48px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 24px;
+        height: 56px;
+      }
+
+      .nav-links {
+        gap: 20px;
+        font-size: 13px;
+      }
+
+      .page-content {
+        padding: 120px 24px 60px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-layout .about-sidebar {
+        order: -1;
+        max-width: 240px;
+      }
+
+      .person-section {
+        padding: 48px 24px 60px;
+      }
+
+      .person-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .person-layout .person-photo-wrap {
+        order: -1;
+        max-width: 180px;
+      }
+
+      .divider {
+        padding: 0 24px;
+      }
+
+      footer {
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Loopwork System</a>
-      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+  <nav>
+    <a href="/" class="nav-name">The Conduction Lab</a>
+    <ul class="nav-links">
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- KIM -->
-  <section class="page-hero fade-in">
-    <div class="section-label">About</div>
-    <h2>Kim Hosein</h2>
-    <div class="about-content">
+  <div class="page-content reveal">
+    <span class="accent-line"></span>
+    <div class="page-label">About</div>
+    <div class="about-layout">
       <div class="about-text">
-        <p>Founder of Loopwork System, LLC. Over a decade of Phase I–IV clinical trial experience as a clinical project lead, working inside the systems that track what drugs do to people over time — adverse event reporting, signal detection, causality assessment. The infrastructure that answers: did this exposure cause this change?</p>
+        <h2>Kim Hosein</h2>
+        <p>Founder of The Conduction Lab. Over a decade of Phase I–IV clinical trial experience as a clinical project lead, working inside the systems that track what drugs do to people over time — adverse event reporting, signal detection, causality assessment. The infrastructure that answers: did this exposure cause this change?</p>
         <p>That question doesn't stop at pharmaceuticals. People are interacting with AI systems, social platforms, and algorithmically mediated relationships at a scale and intensity that has no precedent. Researchers across disciplines are documenting pieces of what's happening — dose-response effects, longitudinal behavioral change, attachment shifts — but they're working in silos, and no one has applied the clinical signal detection methodology that already exists for exactly this kind of problem.</p>
-        <p>Loopwork System is the framework that connects those pieces. The same methodology used to determine whether a drug caused an adverse event can detect and measure the baseline shifts caused by any sustained relational exposure. The unit of analysis is the joint distribution — what forms between person and system — not the individual measured in isolation.</p>
+        <p>The Conduction Lab is the framework that connects those pieces. The same methodology used to determine whether a drug caused an adverse event can detect and measure the baseline shifts caused by any sustained relational exposure. The unit of analysis is the joint distribution — what forms between person and system — not the individual measured in isolation.</p>
       </div>
       <div class="about-sidebar">
         <img src="headshot.jpeg" alt="Kim Hosein" class="about-photo">
         <div class="about-details">
-          <h3>At a glance</h3>
           <div class="detail-item">
             <div class="detail-label">Role</div>
-            <div class="detail-value">Founder, Loopwork System, LLC</div>
+            <div class="detail-value">Founder, The Conduction Lab</div>
           </div>
           <div class="detail-item">
             <div class="detail-label">Background</div>
@@ -74,34 +378,44 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="divider"><hr></div>
 
-  <!-- CHRIS -->
-  <section class="fade-in">
+  <section class="person-section reveal">
     <h2>Chris Hoyd</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p class="collaborator-role">Co-developer — Human Behavioral Infrastructure</p>
+    <div class="person-role">Co-developer — Human Behavioral Infrastructure</div>
+    <div class="person-layout">
+      <div>
         <p>Chris Hoyd holds a JD and brings over a decade of experience in product strategy, UX design, and user research. His work maps the behavioral substrate that makes baseline shift detection possible — the mechanics of emotional recursion, attachment dynamics, and compulsion patterns that constitute someone's individual behavioral signature. This infrastructure is what allows deviation from the mean to be measured at the individual level rather than lost in group averages.</p>
       </div>
-      <div class="about-sidebar">
-        <img src="chris-hoyd.jpeg" alt="Chris Hoyd" class="about-photo">
+      <div class="person-photo-wrap">
+        <img src="chris-hoyd.jpeg" alt="Chris Hoyd" class="person-photo">
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div>&copy; 2026 Loopwork System, LLC. All rights reserved.</div>
-    <div>
+    <div>&copy; 2026 The Conduction Lab. All rights reserved.</div>
+    <div style="margin-top: 0.5rem;">
       <a href="https://loopworksystem.substack.com" target="_blank">Substack</a> ·
       <a href="https://www.linkedin.com/in/kim-h-271b71373" target="_blank">LinkedIn</a>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
