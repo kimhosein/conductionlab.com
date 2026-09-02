@@ -288,35 +288,12 @@
       animation: fadeUp 0.8s ease-out 0.6s forwards;
     }
 
-    .hero-scroll {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      opacity: 0;
-      animation: fadeUp 0.8s ease-out 1.2s forwards;
-    }
-
-    .hero-scroll span {
-      display: block;
-      width: 1px;
-      height: 48px;
-      background: linear-gradient(to bottom, var(--teal), transparent);
-      margin: 0 auto;
-      animation: scrollPulse 2.5s ease-in-out infinite;
-    }
 
     @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.8; }
     }
 
     /* Accent line element */
@@ -607,7 +584,6 @@
       <h1>Systems shift people from their baselines.</h1>
       <p class="sub">AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years. The evidence is scattered across fields. The research has rarely been connected.</p>
     </div>
-    <div class="hero-scroll"><span></span></div>
   </section>
 
   <div class="section-intro reveal">
@@ -646,7 +622,7 @@
       <span class="accent-line"></span>
       <h2>About the lab</h2>
       <p>The Conduction Lab was founded by Kim Hosein, MBA — a clinical project manager in pharmaceutical research whose work in pharmacovigilance and clinical operations provided the native methodology for studying what AI systems actually do to the people who use them.</p>
-      <p>The lab applies signal detection and causality assessment — methods built for identifying adverse events in black-box systems where mechanism is invisible and attribution is assessed from output — to the question of how systems shift human baselines. The result is a research program that doesn't require access to model internals to produce actionable findings.</p>
+      <p>The lab applies signal detection and causality assessment — methods built for identifying adverse events in black-box systems where mechanism is invisible and attribution is assessed from output — to the question of how systems shift human baselines. The result is a research program that produces actionable findings.</p>
     </div>
   </section>
 
