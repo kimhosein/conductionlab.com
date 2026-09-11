@@ -144,7 +144,7 @@
       letter-spacing: -0.02em;
       opacity: 0;
       transform: translateY(24px);
-      animation: fadeUp 0.8s ease-out 0.3s forwards;
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     .hero .sub {
@@ -156,14 +156,12 @@
       max-width: 640px;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeUp 0.8s ease-out 0.6s forwards;
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hero-visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
 
     /* ── Cards section (merged intro + work) ── */
@@ -428,6 +426,15 @@
   </footer>
 
   <script>
+    // Hero fade-up on load
+    window.addEventListener('DOMContentLoaded', function() {
+      var h1 = document.querySelector('.hero h1');
+      var sub = document.querySelector('.hero .sub');
+      if (h1) setTimeout(function() { h1.classList.add('hero-visible'); }, 300);
+      if (sub) setTimeout(function() { sub.classList.add('hero-visible'); }, 600);
+    });
+
+    // Scroll reveal for cards
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
