@@ -13,70 +13,15 @@
     gtag('config', 'G-GKKN2V9YL5');
   </script>
 
-  <title>The Conduction Lab — AI Safety Research & Human-AI Interaction</title>
-  <meta name="description" content="The Conduction Lab applies clinical trial methodology — signal detection, causality assessment, pharmacovigilance — to measure how AI systems, social platforms, and algorithmic exposure shift human behavioral baselines. Independent AI safety research at the intersection of clinical science and AI governance.">
-  <meta name="keywords" content="AI safety research, human-AI interaction, clinical trials AI, AI governance, pharmacovigilance AI, baseline shift detection, AI safety evaluation, human-centered AI, clinical decision making AI, RLHF safety, AI behavioral impact, relational exposure, AI risk assessment, algorithmic harm">
-  <meta name="author" content="Kim Hosein">
-  <link rel="canonical" href="https://conductionlab.com">
+  <title>Homepage Preview — The Conduction Lab</title>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ResearchOrganization",
-    "name": "The Conduction Lab",
-    "url": "https://conductionlab.com",
-    "description": "Independent research lab applying pharmacovigilance and causality assessment methodology to measure baseline shifts from sustained interaction with AI systems, social platforms, and algorithmically mediated relationships.",
-    "founder": {
-      "@type": "Person",
-      "name": "Kim Hosein",
-      "jobTitle": "Founder",
-      "url": "https://conductionlab.com/about.html",
-      "sameAs": "https://www.linkedin.com/in/kim-h-271b71373"
-    },
-    "knowsAbout": [
-      "AI Safety Research",
-      "Causality Assessment",
-      "Pharmacovigilance",
-      "Human-AI Interaction",
-      "AI Governance",
-      "Baseline Shift Detection",
-      "Clinical Trials",
-      "Causality Assessment",
-      "AI Safety Evaluation",
-      "Human-Centered AI",
-      "Clinical Decision Making"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/in/kim-h-271b71373"
-    ]
-  }
-  </script>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="The Conduction Lab">
-  <meta property="og:description" content="Systems shift people from their baselines. AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://conductionlab.com">
-  <meta property="og:site_name" content="The Conduction Lab">
-
-  <!-- Twitter/Social Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Conduction Lab">
-  <meta name="twitter:description" content="Systems shift people from their baselines. AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years.">
-
-  <!-- Google Scholar metadata -->
-  <meta name="citation_author" content="Hosein, Kim">
-  <meta name="citation_title" content="Beyond the Safety Layer: How RLHF Architecture Produces Clinically Recognizable Patterns of User Harm">
-  <meta name="citation_publication_date" content="2026/06/03">
-  <meta name="citation_conference_title" content="Stanford AIMI Symposium 2026">
-  <meta name="citation_pdf_url" content="https://conductionlab.com/Hosein_AIMI2026_Poster_FINAL.pdf">
-  <meta name="citation_doi" content="10.5281/zenodo.20369051">
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
-
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -101,10 +46,6 @@
       --max-content: 700px;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'DM Sans', sans-serif;
       color: var(--text-primary);
@@ -115,7 +56,7 @@
       overflow-x: hidden;
     }
 
-    /* Navigation */
+    /* ── Nav ── */
     nav {
       position: fixed;
       top: 0;
@@ -164,7 +105,7 @@
       color: var(--text-primary);
     }
 
-    /* Hero */
+    /* ── Hero ── */
     .hero {
       position: relative;
       background: var(--bg-hero);
@@ -175,111 +116,6 @@
       overflow: hidden;
     }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
-
-    .hero-bg svg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.15s ease-out;
-    }
-
-    .signal-line {
-      stroke: var(--teal);
-      stroke-width: 1.5;
-      fill: none;
-      opacity: 0.12;
-    }
-
-    .signal-line:nth-child(2) {
-      opacity: 0.09;
-      stroke-width: 2;
-    }
-
-    .signal-line:nth-child(3) {
-      opacity: 0.07;
-      stroke-width: 2.5;
-    }
-
-    /* Conducting pulse that travels along the line */
-    .signal-pulse {
-      fill: none;
-      stroke: var(--teal);
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      opacity: 0;
-    }
-
-    .signal-pulse.p1 {
-      stroke-dasharray: 80 2000;
-      animation: conductPulse1 6s ease-in-out infinite;
-    }
-
-    .signal-pulse.p2 {
-      stroke-dasharray: 120 2000;
-      animation: conductPulse2 8s ease-in-out 2s infinite;
-    }
-
-    .signal-pulse.p3 {
-      stroke-dasharray: 60 2000;
-      animation: conductPulse3 7s ease-in-out 4s infinite;
-    }
-
-    @keyframes conductPulse1 {
-      0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.5; }
-      50% { opacity: 0.3; }
-      95% { opacity: 0.5; }
-      100% { stroke-dashoffset: -200; opacity: 0; }
-    }
-
-    @keyframes conductPulse2 {
-      0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.45; }
-      50% { opacity: 0.25; }
-      95% { opacity: 0.45; }
-      100% { stroke-dashoffset: -200; opacity: 0; }
-    }
-
-    @keyframes conductPulse3 {
-      0% { stroke-dashoffset: 2100; opacity: 0; }
-      5% { opacity: 0.4; }
-      50% { opacity: 0.2; }
-      95% { opacity: 0.4; }
-      100% { stroke-dashoffset: -200; opacity: 0; }
-    }
-
-    /* Glowing dot that travels along the path */
-    .signal-traveler {
-      fill: var(--teal);
-      opacity: 0;
-      filter: url(#glow);
-    }
-
-    .signal-traveler.t1 {
-      animation: travelerFade 6s ease-in-out infinite;
-    }
-
-    .signal-traveler.t2 {
-      animation: travelerFade 8s ease-in-out 2s infinite;
-    }
-
-    .signal-traveler.t3 {
-      animation: travelerFade 7s ease-in-out 4s infinite;
-    }
-
-    @keyframes travelerFade {
-      0%, 100% { opacity: 0; }
-      10% { opacity: 0.8; }
-      50% { opacity: 0.5; }
-      90% { opacity: 0.8; }
-    }
-
-    /* Gradient fade at bottom of hero */
     .hero::after {
       content: '';
       position: absolute;
@@ -323,7 +159,6 @@
       animation: fadeUp 0.8s ease-out 0.6s forwards;
     }
 
-
     @keyframes fadeUp {
       to {
         opacity: 1;
@@ -331,43 +166,7 @@
       }
     }
 
-    /* Accent line element */
-    .accent-line {
-      display: block;
-      width: 48px;
-      height: 2px;
-      background: var(--teal);
-      margin-bottom: 32px;
-    }
-
-    /* Intro section */
-    .section-intro {
-      max-width: var(--max-content);
-      margin: 0 auto;
-      padding: 80px 48px 80px;
-    }
-
-    .section-intro h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-      font-weight: 400;
-      margin-bottom: 28px;
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-      color: var(--text-primary);
-    }
-
-    .section-intro p {
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-      font-weight: 300;
-    }
-
-    .section-intro p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Work section */
+    /* ── Cards section (merged intro + work) ── */
     .work-section {
       background: var(--bg-warm);
       border-top: 1px solid var(--rule);
@@ -384,7 +183,7 @@
       font-family: 'Instrument Serif', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.4rem);
       font-weight: 400;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
       letter-spacing: -0.015em;
       color: var(--text-primary);
     }
@@ -400,6 +199,8 @@
     .work-card {
       background: var(--bg);
       padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
       transition: background 0.3s;
     }
 
@@ -408,13 +209,13 @@
     }
 
     .work-card h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 18px;
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      line-height: 1.3;
     }
 
     .work-card p {
@@ -423,6 +224,7 @@
       color: var(--text-secondary);
       margin-bottom: 24px;
       font-weight: 300;
+      flex: 1;
     }
 
     .work-card a {
@@ -446,38 +248,51 @@
       font-size: 16px;
     }
 
-    /* About section */
-    .about-section {
-      background: var(--bg);
-    }
-
-    .about-inner {
+    /* ── Latest post ── */
+    .latest-post {
       max-width: var(--max-content);
       margin: 0 auto;
-      padding: 100px 48px;
+      padding: 72px 48px;
     }
 
-    .about-inner h2 {
+    .latest-post-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .latest-post a {
+      text-decoration: none;
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .latest-post a:hover {
+      opacity: 0.75;
+    }
+
+    .latest-post-title {
       font-family: 'Instrument Serif', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-size: 1.35rem;
       font-weight: 400;
-      margin-bottom: 28px;
-      letter-spacing: -0.015em;
       color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
     }
 
-    .about-inner p {
+    .latest-post-excerpt {
+      font-size: 0.92rem;
       color: var(--text-secondary);
       font-weight: 300;
-      margin-bottom: 20px;
-      line-height: 1.75;
+      line-height: 1.65;
     }
 
-    .about-inner p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Footer */
+    /* ── Footer ── */
     footer {
       background: var(--bg-warm);
       border-top: 1px solid var(--rule);
@@ -498,7 +313,7 @@
       color: var(--text-primary);
     }
 
-    /* Scroll reveal */
+    /* ── Scroll reveal ── */
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -510,7 +325,7 @@
       transform: translateY(0);
     }
 
-    /* Mobile */
+    /* ── Mobile ── */
     @media (max-width: 768px) {
       nav {
         padding: 0 24px;
@@ -524,10 +339,6 @@
 
       .hero-content {
         padding: 100px 24px 100px;
-      }
-
-      .section-intro {
-        padding: 60px 24px;
       }
 
       .work-section {
@@ -546,8 +357,8 @@
         padding: 32px 28px;
       }
 
-      .about-inner {
-        padding: 72px 24px;
+      .latest-post {
+        padding: 56px 24px;
       }
 
       footer {
@@ -575,91 +386,39 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-bg">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        <!-- Static base lines -->
-        <path id="line1" class="signal-line" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
-        <path id="line2" class="signal-line" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
-        <path id="line3" class="signal-line" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
-
-        <!-- Conducting pulses that travel along the lines -->
-        <path class="signal-pulse p1" d="M-100,300 C200,280 400,450 600,350 S900,200 1100,380 S1400,300 1600,350" />
-        <path class="signal-pulse p2" d="M-100,500 C150,520 350,380 550,480 S800,600 1000,450 S1300,500 1600,480" />
-        <path class="signal-pulse p3" d="M-100,650 C250,630 450,700 650,620 S950,550 1150,680 S1350,650 1600,620" />
-
-        <!-- Glowing dots that travel along the paths -->
-        <circle class="signal-traveler t1" r="4">
-          <animateMotion dur="6s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
-            <mpath href="#line1" />
-          </animateMotion>
-        </circle>
-        <circle class="signal-traveler t2" r="3.5">
-          <animateMotion dur="8s" begin="2s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
-            <mpath href="#line2" />
-          </animateMotion>
-        </circle>
-        <circle class="signal-traveler t3" r="3">
-          <animateMotion dur="7s" begin="4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.6 1">
-            <mpath href="#line3" />
-          </animateMotion>
-        </circle>
-      </svg>
-    </div>
     <div class="hero-content">
       <h1>Systems shift people from their baselines.</h1>
       <p class="sub">AI made the shift impossible to ignore — but platforms, algorithms, feeds, and devices have been doing it for years. The evidence is scattered across fields. The research has rarely been connected.</p>
     </div>
   </section>
 
-  <div class="section-intro reveal">
-    <span class="accent-line"></span>
-    <h2>The lab exists to connect it.</h2>
-    <p>The Conduction Lab develops measurement frameworks, detection tools, and governance architectures for a phenomenon observed across every domain but studied in none as a unified problem: the systematic shift of human baselines by the systems people interact with.</p>
-    <p>Our foundational research identifies the mechanism. Large language models don't generate human-like signal — they conduct real human signal through training data, producing systematic source misattribution at the point of reception. This is the Conduction Hypothesis, and it reframes how we study human-AI interaction, AI safety, and the broader question of what happens when systems mediate human experience.</p>
-    <p>The methodology is native to pharmacovigilance and clinical research — signal detection, causality assessment, and baseline measurement applied to a new exposure class. The work extends beyond AI to every system that shifts a baseline: social media, devices, relational dynamics, and the body itself.</p>
-  </div>
-
   <section id="research" class="work-section">
     <div class="work-inner reveal">
-      <h2>The work</h2>
+      <h2>The lab exists to connect it.</h2>
       <div class="work-grid">
         <div class="work-card">
-          <h3>Research</h3>
-          <p>The theoretical foundation. The Conduction Hypothesis, misconduction as a failure mode, corpus dynamics as the study of how humans interact with the accumulated body of what they've received and stored, and the frameworks that make baseline shifts detectable.</p>
+          <h3>What we study</h3>
+          <p>How systems shift people from their baselines — AI, algorithms, platforms, devices. The effects are measurable, and the methodology to measure them already exists in clinical research and pharmacovigilance.</p>
           <a href="publications.html">Explore</a>
         </div>
         <div class="work-card">
-          <h3>Translational Work</h3>
-          <p>Theory turned into infrastructure. Detection frameworks, authentication protocols, clinical AI governance tools, and product architectures that operationalize the research into systems people and organizations can use.</p>
+          <h3>What we build</h3>
+          <p>Governance frameworks, detection tools, and deployment strategy for organizations scaling AI in regulated environments — where you have to prove safety before you scale, not after.</p>
           <a href="publications.html">Explore</a>
         </div>
         <div class="work-card">
-          <h3>Publications</h3>
-          <p>Academic presentations, submitted research, and long-form writing. Peer-reviewed work alongside public writing that develops ideas before formal submission.</p>
+          <h3>The mechanism</h3>
+          <p>The Conduction Hypothesis: LLMs don't generate human-like signal — they conduct real human signal through training data, producing systematic source misattribution at the point of reception. This changes how we evaluate safety, risk, and readiness.</p>
           <a href="publications.html">Explore</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about-section">
-    <div class="about-inner reveal">
-      <span class="accent-line"></span>
-      <h2>About the lab</h2>
-      <p>The Conduction Lab was founded by Kim Hosein, MBA — a clinical project manager in pharmaceutical research whose work in pharmacovigilance and clinical operations provided the native methodology for studying what AI systems actually do to the people who use them.</p>
-      <p>The lab applies signal detection and causality assessment — methods built for identifying adverse events in black-box systems where mechanism is invisible and attribution is assessed from output — to the question of how systems shift human baselines. The result is a research program that produces actionable findings.</p>
-    </div>
-  </section>
+  <div class="latest-post reveal">
+    <div class="latest-post-label">Latest writing</div>
+    <div class="latest-post-title" style="color: var(--text-secondary); font-style: italic;">Coming soon</div>
+  </div>
 
   <footer>
     <div>&copy; 2026 The Conduction Lab. All rights reserved.</div>
@@ -680,15 +439,6 @@
     }, { threshold: 0.15 });
 
     reveals.forEach(el => observer.observe(el));
-
-    const heroBg = document.querySelector('.hero-bg svg');
-    if (heroBg && window.matchMedia('(pointer: fine)').matches) {
-      document.querySelector('.hero').addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 12;
-        const y = (e.clientY / window.innerHeight - 0.5) * 8;
-        heroBg.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    }
   </script>
 
 </body>
