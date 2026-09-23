@@ -8,12 +8,6 @@ image: /assets/images/iceberg-enterprise-ai.png
 category: clinical-research
 ---
 
-# The Three-Body Problem in Enterprise AI: Why Clean Data Isn't Enough
-
-*The Conduction Lab*
-
----
-
 Let's talk about the adoption of commercial AI in regulated industries. Your organization signs an enterprise agreement, and what that gets you is better data protection. HIPAA configuration, business associate agreements, data retention controls, audit trails, access management. What it does not get you is a different model. The underlying weights are the same ones running the free and consumer tiers that anyone can sign up for today. The architecture is the same. The optimization process that shaped the model's behavior is the same. You are paying for data governance layered on top of a general-purpose consumer model — not for different reasoning underneath it.
 
 The conversation about responsible AI in these spaces is almost entirely about the data. Data quality. Data diversity. Data governance. That conversation is correct and necessary — but the data is just one layer to consider. There are at least two more between the data and the output, and I'm going to focus on both of them here.
