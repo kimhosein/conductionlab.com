@@ -12,6 +12,8 @@ Let's talk about the adoption of commercial AI in regulated industries. Your org
 
 The conversation about responsible AI in these spaces is almost entirely about the data. Data quality. Data diversity. Data governance. That conversation is correct and necessary — but the data is just one layer to consider. There are at least two more between the data and the output, and I'm going to focus on both of them here.
 
+![Enterprise AI iceberg — what you negotiate vs. what shapes the output](/assets/images/iceberg-enterprise-ai.png)
+
 ---
 
 ## The two-body assumption
