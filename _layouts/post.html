@@ -26,6 +26,9 @@
   <meta property="og:site_name" content="Loopwork System">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
   <meta property="article:author" content="Kim Hosein">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {% endif %}
   {% if page.tags %}
   {% for tag in page.tags %}
   <meta property="article:tag" content="{{ tag }}">
@@ -33,9 +36,12 @@
   {% endif %}
 
   <!-- Twitter/Social Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:title" content="{{ page.title }} — Loopwork System">
   <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  {% endif %}
 
   <!-- Google Scholar metadata (for research posts) -->
   {% if page.scholar %}
